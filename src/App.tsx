@@ -1,23 +1,19 @@
 import React from "react";
 import "./App.css";
+import { Container } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./styles/theme";
+import Appbar from "./components/appbar";
+import Banner from "./components/banner";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Container sx={{ background: "#fff" }} maxWidth="xl">
+        <Appbar />
+        <Banner />
+      </Container>
+    </ThemeProvider>
   );
 }
 
