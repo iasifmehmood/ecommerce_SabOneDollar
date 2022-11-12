@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-export const Colors = {
+export const Colors: any = {
   primary: "#5f2c3e",
   secondary: "#d1adcc",
   info: "#00a2ff",
@@ -21,7 +21,7 @@ export const Colors = {
   black: "#000",
 };
 
-const theme = createTheme({
+const theme: any = createTheme({
   palette: {
     primary: {
       main: Colors.primary,

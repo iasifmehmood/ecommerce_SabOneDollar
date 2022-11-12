@@ -9,7 +9,7 @@ import {
 } from "../../styles/banner";
 
 export default function Banner() {
-  const theme = useTheme();
+  const theme: any = useTheme();
   const matches: any = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <BannerContainer matches={matches} theme={theme}>

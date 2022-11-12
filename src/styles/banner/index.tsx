@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 import { Colors } from "../theme";
 
-export const BannerContainer = styled(Box)(
+export const BannerContainer: any = styled(Box)(
   ({ matches, theme }: { matches: any; theme: any }) => ({
     display: "flex",
     justifyContent: "center",
@@ -20,7 +20,7 @@ export const BannerContainer = styled(Box)(
   })
 );
 
-export const BannerContent = styled(Box)(() => ({
+export const BannerContent: any = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -28,7 +28,7 @@ export const BannerContent = styled(Box)(() => ({
   padding: "30px",
 }));
 
-export const BannerImage = styled("img")(({ src, theme }) => ({
+export const BannerImage: any = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
   // backgroundImage: `url(${src})`,
   // backgroundRepeat: "no-repeat",
@@ -43,7 +43,7 @@ export const BannerImage = styled("img")(({ src, theme }) => ({
   },
 }));
 
-export const BannerTitle = styled(Typography)(
+export const BannerTitle: any = styled(Typography)(
   ({ matches, theme }: { matches: any; theme: any }) => ({
     lineHeight: 1.5,
     fontSize: "72px",
@@ -54,7 +54,7 @@ export const BannerTitle = styled(Typography)(
   })
 );
 
-export const BannerDescription = styled(Typography)(
+export const BannerDescription: any = styled(Typography)(
   ({ matches, theme }: { matches: any; theme: any }) => ({
     lineHeight: 1.25,
     letterSpacing: 1.25,

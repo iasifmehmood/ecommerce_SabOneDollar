@@ -5,7 +5,7 @@ import { Colors } from "../theme";
 import "@fontsource/montez";
 
 // for container
-export const AppbarContainer = styled(Box)(() => ({
+export const AppbarContainer: any = styled(Box)(() => ({
   display: "flex",
   marginTop: 4,
   justifyContent: "center",
@@ -15,7 +15,7 @@ export const AppbarContainer = styled(Box)(() => ({
 
 //for header
 
-export const AppbarHeader = styled(Typography)(() => ({
+export const AppbarHeader: any = styled(Typography)(() => ({
   padding: "4px",
   flexGrow: 1,
   fontSize: "3em",
@@ -23,18 +23,18 @@ export const AppbarHeader = styled(Typography)(() => ({
   color: Colors.secondary,
 }));
 
-export const MyList = styled(List)(({ type }: { type: any }) => ({
+export const MyList: any = styled(List)(({ type }: { type: any }) => ({
   display: type === "row" ? "flex" : "block",
   flexGrow: 3,
   justifyContent: "center",
   alignItems: "center",
 }));
 
-export const ActionIconsContainerDesktop = styled(Box)(() => ({
+export const ActionIconsContainerDesktop: any = styled(Box)(() => ({
   flexGrow: 0,
 }));
 
-export const ActionIconsContainerMobile = styled(Box)(() => ({
+export const ActionIconsContainerMobile: any = styled(Box)(() => ({
   display: "flex",
   background: Colors.shaft,
   position: "fixed",

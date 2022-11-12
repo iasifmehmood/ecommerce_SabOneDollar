@@ -4,7 +4,7 @@ import AppbarDesktop from "./appbarDesktop";
 import AppbarMobile from "./appbarMobile";
 
 export default function Appbar() {
-  const theme = useTheme();
+  const theme: any = useTheme();
   const matches: any = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
