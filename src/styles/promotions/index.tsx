@@ -5,9 +5,10 @@ export const PromotionsContainer: any = styled(Box)(({ theme }) => ({
   //up means to larger devices down means on smaller devices
   [theme.breakpoints.up("md")]: {
     padding: "40px 0px 40px 0px",
+    marginBottom: "12px",
   },
   [theme.breakpoints.down("sm")]: {
-    marginBottom: "50px",
+    marginBottom: "12px",
   },
   display: "flex",
   justifyContent: "center",

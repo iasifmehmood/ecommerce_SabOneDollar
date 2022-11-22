@@ -1,4 +1,4 @@
-import { Product, ProductImage } from "../../styles/Products";
+import { Product, ProductAddToCart, ProductImage } from "../../styles/Products";
 import ProductMeta from "./ProductMeta";
 
 export default function SingleProduct({
@@ -11,9 +11,15 @@ export default function SingleProduct({
   theme: any;
 }) {
   return (
-    <Product>
-      <ProductImage src={product.image} theme={theme} />
-      <ProductMeta product={product} matches={matches} />
-    </Product>
+    <>
+      <Product>
+        <ProductImage src={product.image} theme={theme} />
+        <ProductMeta product={product} matches={matches} />
+
+        <ProductAddToCart show theme={theme} variant="contained">
+          Add to Cart
+        </ProductAddToCart>
+      </Product>
+    </>
   );
 }
