@@ -30,7 +30,7 @@ export default function Products() {
     </Grid>
   ));
   return (
-    <Container sx={{ marginBottom: "50px" }}>
+    <Container>
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
