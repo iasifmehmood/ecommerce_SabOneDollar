@@ -1,7 +1,14 @@
-import { Product, ProductAddToCart, ProductImage } from "../../styles/Products";
+import {
+  Product,
+  ProductActionButton,
+  ProductActionWrapper,
+  ProductAddToCart,
+  ProductImage,
+} from "../../styles/Products";
 import ProductMeta from "./ProductMeta";
-
+import { Stack, Tooltip } from "@mui/material";
 import React, { useState } from "react";
+import ShareIcon from "@mui/icons-material/Share";
 
 export default function SingleProductDesktop({
   product,
@@ -22,18 +29,26 @@ export default function SingleProductDesktop({
 
   return (
     <>
-      <Product>
-        <ProductImage
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          src={product.image}
-          theme={theme}
-        />
-        {showOptions && (
-          <ProductAddToCart show={showOptions} theme={theme}>
-            Add to Cart
+      <Product onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <ProductImage src={product.image} theme={theme} />
+        {(showOptions || matches) && (
+          <ProductAddToCart
+            show={showOptions}
+            theme={theme}
+            variant="contained"
+          >
+            Add to cart
           </ProductAddToCart>
         )}
+        <ProductActionWrapper theme={theme} show={showOptions || matches}>
+          <Stack direction={matches ? "row" : "column"}>
+            <ProductActionButton>
+              <Tooltip placement="left" title="share this product">
+                <ShareIcon color="primary" />
+              </Tooltip>
+            </ProductActionButton>
+          </Stack>
+        </ProductActionWrapper>
       </Product>
       <ProductMeta product={product} matches={matches} />
     </>

@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 import { slideInBottom, slideInRight } from "../../animation";
 import { Colors } from "../theme";
 
-export const Product = styled(Box)(({ theme }: { theme: any }) => ({
+export const Product: any = styled(Box)(({ theme }: { theme: any }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -13,7 +13,7 @@ export const Product = styled(Box)(({ theme }: { theme: any }) => ({
   },
 }));
 
-export const ProductImage = styled("img")(
+export const ProductImage: any = styled("img")(
   ({ theme, src }: { theme: any; src: any }) => ({
     src: `url(${src})`,
     width: "100%",
@@ -26,13 +26,13 @@ export const ProductImage = styled("img")(
   })
 );
 
-export const ProductActionButton = styled(IconButton)(() => ({
+export const ProductActionButton: any = styled(IconButton)(() => ({
   background: Colors.white,
   margin: 4,
 }));
 
-export const ProductAddToCart = styled(Button, {
-  shouldForwardProp: (prop: any) => prop !== "show",
+export const ProductAddToCart: any = styled(Button, {
+  shouldForwardProp: prop => prop !== "show",
 })(({ show, theme }: { show: boolean; theme: any }) => ({
   width: "120px",
   fontSize: "12px",
@@ -49,24 +49,26 @@ export const ProductAddToCart = styled(Button, {
   opacity: 0.9,
 }));
 
-export const ProductMetaWrapper = styled(Box)(({ theme }: { theme: any }) => ({
-  // not used yet
-  padding: 4,
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-}));
+export const ProductMetaWrapper: any = styled(Box)(
+  ({ theme }: { theme: any }) => ({
+    // not used yet
+    padding: 4,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  })
+);
 
-export const ProductActionWrapper = styled(Box, {
-  shouldForwardProp: (prop: any) => prop !== "show",
-})(({ show, theme }: { show: boolean; theme: any }) => ({
-  [theme.breakpoints.up("md")]: {
-    display: show ? "visible" : "none",
-    position: "absolute",
-    right: 0,
-    top: "20%",
-    animation:
-      show &&
-      `${slideInRight} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
-  },
-}));
+export const ProductActionWrapper: any = styled(Box)(
+  ({ show, theme }: { show: boolean; theme: any }) => ({
+    [theme.breakpoints.up("md")]: {
+      display: show ? "visible" : "none",
+      position: "absolute",
+      right: 0,
+      top: "20%",
+      animation:
+        show &&
+        `${slideInRight} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
+    },
+  })
+);

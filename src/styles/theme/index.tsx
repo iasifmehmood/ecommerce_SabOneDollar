@@ -1,5 +1,11 @@
 import { createTheme } from "@mui/material/styles";
-
+import { lighten } from "polished";
+// https://github.com/gregnb/mui-datatables/issues/1810
+declare module "@mui/material/styles" {
+  interface Components {
+    [key: string]: any;
+  }
+}
 export const Colors: any = {
   primary: "#5f2c3e",
   secondary: "#d1adcc",
@@ -36,6 +42,25 @@ const theme: any = createTheme({
       defaultProps: {
         disableRipple: true,
         disableElevation: true,
+      },
+    },
+    MyShopButton: {
+      styleOverrides: {
+        root: {
+          color: Colors.white,
+        },
+        primary: {
+          background: Colors.primary,
+          "&:hover": {
+            background: lighten(0.05, Colors.primary),
+          },
+        },
+        secondary: {
+          background: `${Colors.secondary}`,
+          "&:hover": {
+            background: lighten(0.05, Colors.primary),
+          },
+        },
       },
     },
   },

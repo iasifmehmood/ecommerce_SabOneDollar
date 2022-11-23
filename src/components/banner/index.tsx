@@ -6,6 +6,7 @@ import {
   BannerDescription,
   BannerTitle,
   BannerImage,
+  BannerShopButton,
 } from "../../styles/banner";
 
 export default function Banner() {
@@ -24,6 +25,9 @@ export default function Banner() {
         <BannerDescription matches={matches} theme={theme}>
           You will buy all things in only $1 from anywhere and everywhere
         </BannerDescription>
+        <BannerShopButton color="primary" theme={theme}>
+          Shop Now
+        </BannerShopButton>
       </BannerContent>
     </BannerContainer>
   );
