@@ -26,6 +26,7 @@ export const AppbarHeader: any = styled(Typography)(() => ({
   },
 }));
 
+
 export const ActionIconsContainerMobile: any = styled(Box)(() => ({
   display: "flex",
   background: Colors.shaft,

@@ -14,7 +14,7 @@ export default function ProductMeta({
         {product.name}
       </Typography>
       <Typography variant={matches ? "caption" : "body1"}>
-        ${product.price}
+        Rs {product.price}
       </Typography>
     </ProductMetaWrapper>
   );
