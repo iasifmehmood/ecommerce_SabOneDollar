@@ -14,7 +14,7 @@ export default function Banner() {
   const matches: any = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <BannerContainer matches={matches} theme={theme}>
-      <BannerImage src="/images/banner/banner.png" />
+      <BannerImage src="/images/banner/decoration_banner.png" />
 
       <BannerContent>
         <Typography variant="h6">Banner Content</Typography>

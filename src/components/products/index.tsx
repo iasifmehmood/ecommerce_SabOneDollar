@@ -11,8 +11,8 @@ export default function Products() {
     <Grid
       item
       key={product.id}
-      xs={7}
-      sm={4}
+      xs={6}
+      sm={5}
       md={4}
       display="flex"
       flexDirection={"column"}

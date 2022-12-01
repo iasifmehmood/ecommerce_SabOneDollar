@@ -9,6 +9,8 @@ import ProductMeta from "./ProductMeta";
 import { Stack, Tooltip } from "@mui/material";
 import React, { useState } from "react";
 import ShareIcon from "@mui/icons-material/Share";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
 
 export default function SingleProductDesktop({
   product,
@@ -45,6 +47,16 @@ export default function SingleProductDesktop({
             <ProductActionButton>
               <Tooltip placement="left" title="share this product">
                 <ShareIcon color="primary" />
+              </Tooltip>
+            </ProductActionButton>
+            <ProductActionButton>
+              <Tooltip placement="left" title="Open Cart">
+                <ShoppingCartOutlinedIcon color="primary" />
+              </Tooltip>
+            </ProductActionButton>
+            <ProductActionButton>
+              <Tooltip placement="left" title="Click to view">
+                <OpenInNewOutlinedIcon color="primary" />
               </Tooltip>
             </ProductActionButton>
           </Stack>
