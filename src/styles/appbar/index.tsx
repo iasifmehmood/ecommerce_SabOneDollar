@@ -1,4 +1,4 @@
-import { Typography, List } from "@mui/material";
+import { Typography, List, IconButton } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/system";
 import { Colors } from "../theme";
@@ -26,7 +26,6 @@ export const AppbarHeader: any = styled(Typography)(() => ({
   },
 }));
 
-
 export const ActionIconsContainerMobile: any = styled(Box)(() => ({
   display: "flex",
   background: Colors.shaft,
@@ -48,4 +47,11 @@ export const MyList: any = styled(List)(({ type }: { type: any }) => ({
   flexGrow: 3,
   justifyContent: "center",
   alignItems: "center",
+}));
+
+export const DrawerCloseButton: any = styled(IconButton)(() => ({
+  position: "absolute",
+  top: 10,
+  left: "215px",
+  zIndex: 1999, // top of everything
 }));
